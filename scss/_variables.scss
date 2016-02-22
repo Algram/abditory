@@ -10,3 +10,17 @@ $color-dark-gray: #999999;
 $color-light-gray: #E9E9E9;
 $color-dark-black: #212121;
 $color-light-black: #3F3F3F;
+$color-white: #FFFFFF;
+$color-dark-white: #F2F2F2;
+
+$base-bg-color: $color-dark-white;
+$second-bg-color: $color-light-black;
+
+//font
+@mixin headline-font-family {
+  font-family: 'Raleay', sans-serif;
+}
+
+@mixin text-font-family {
+  font-family: 'Lato', sans-serif;
+}

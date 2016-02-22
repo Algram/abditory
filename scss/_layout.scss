@@ -1,1 +1,170 @@
+body {
+  background-color: $base-bg-color;
+}
 
+h1,h2 {
+  @include headline-font-family;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+p {
+  @include text-font-family;
+}
+
+nav {
+  display: block;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.header {
+  height: 80px;
+  background: $color-white;;
+  color: $color-blue;
+  box-shadow: 0 0 15px 0  $color-dark-gray;
+}
+
+.header-logo {
+  @include make-sm-column(2);
+  @include make-sm-column-offset(5);
+
+  img {
+    height: 80px;
+  }
+}
+
+.content-login {
+  @include make-md-column(6);
+  @include make-md-column-offset(3);
+
+  padding: 140px 0 300px 0;
+  text-align: center;
+
+  @media (min-width: $screen-md-min) {
+    padding: 140px 0 370px 0;
+  }
+
+  p {
+    padding-bottom: 50px;
+  }
+
+  button {
+    @include make-xs-column(10);
+    @include make-xs-column-offset(1);
+
+    @include make-sm-column(6);
+    @include make-sm-column-offset(3);
+
+    @include make-md-column(4);
+    @include make-md-column-offset(4);
+
+    height: 35px;
+    border: none;
+    background: $color-red;
+    color: $color-white;
+  }
+}
+
+.content-dark-bg {
+  background-color: $second-bg-color;
+
+  .dark-bg-foto {
+    @include make-md-column(10);
+    @include make-md-column-offset(1);
+
+    img {
+      width: 100%;
+      margin: -250px auto 0;
+    }
+
+    @media (min-width: $screen-md-min) {
+      img {
+        margin: -340px auto 0;
+      }
+    }
+  }
+
+  .dark-bg-text {
+    @include make-md-column(4);
+    @include make-md-column-offset(4);
+
+    text-align: center;
+    color: $color-white;
+
+    p {
+      margin-top: 10px;
+    }
+
+    h2 {
+      margin: 40px 0;
+    }
+  }
+
+  .dark-bg-icon {
+    @include make-md-column(2);
+
+    padding-bottom: 40px;
+
+    &:first-child {
+      @include make-md-column-offset(1);
+    }
+
+    img {
+      width: 102px;
+      display: block;
+      margin:auto;
+    }
+
+    h3, p {
+      color: $color-white;
+      text-align: center;
+    }
+  }
+}
+
+.content-intro {
+  padding: 20px 0;
+
+  &:first-child {
+    padding-top:100px;
+  }
+
+  &:last-child {
+    padding-bottom: 100px;
+  }
+
+  .content-intro-img {
+    @include make-sm-column(6);
+
+    img {
+      display: block;
+      width: 300px;
+      margin: auto;
+    }
+  }
+
+  .content-intro-text {
+    @include make-sm-column(6);
+
+    height: 300px;
+    padding: 75px 0;
+  }
+}
+
+.footer {
+  height: 200px;
+}
