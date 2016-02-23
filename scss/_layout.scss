@@ -218,13 +218,8 @@ nav {
   @include make-md-column(6);
   @include make-md-column-offset(3);
 
-  padding: 140px 0 30px 0;
-  //padding-top: 140px;
+  padding: 140px 0 50px 0;
   text-align: center;
-
-  @media (min-width: $screen-md-min) {
-    //padding: 140px 0 370px 0;
-  }
 
   p {
     padding-bottom: 50px;
@@ -266,14 +261,26 @@ nav {
   @include make-md-column(12);
 
   .preis-detail {
-    @include make-md-column(3);
-    padding: 0;
-    margin: 70px 1%;
+    @include make-sm-column(3);
+    padding: 0 0 20px 0;
+
+    @media (min-width: $screen-md-min) {
+      padding: 0;
+    }
+
+    margin: 30px 1%;
     border: solid 1px $color-light-gray;
 
+    @media (min-width: $screen-md-min) {
+      margin: 70px 1%;
+    }
 
     &:first-child {
-      margin-left: 10.5%;
+      margin-left: 0;
+
+      @media (min-width: $screen-sm-min) {
+        margin-left: 10.5%;
+      }
     }
 
     ul {
@@ -307,13 +314,15 @@ nav {
               font-weight: 300;
             }
           }
-
-          + li {
-            padding-top: 20px;
-          }
         }
 
+        + li {
+          padding-top: 20px;
+        }
 
+        &:last-child {
+          padding-bottom: 20px;
+        }
 
         button {
           @include make-md-column(10);
