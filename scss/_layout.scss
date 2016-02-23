@@ -1,5 +1,6 @@
 body {
   background-color: $base-bg-color;
+  @include text-font-family;
 }
 
 h1,h2 {
@@ -35,7 +36,7 @@ nav {
   height: 80px;
   background: $color-white;;
   color: $color-blue;
-  box-shadow: 0 0 15px 0  $color-dark-gray;
+  box-shadow: 0 4px 2px -2px $color-dark-gray;
 }
 
 .header-logo {
@@ -44,6 +45,172 @@ nav {
 
   img {
     height: 80px;
+  }
+}
+
+.header-logo-small {
+  @include make-sm-column(1);
+
+  img {
+    height: 80px;
+  }
+}
+
+.header-suche {
+  @include make-md-column(4);
+  @include make-md-column-offset(3);
+}
+
+/* Search Box */
+
+.search-box {
+  position: relative;
+  height: 40px; /* Define the search box height and width here */
+  width: 100%;
+  margin-top: 20px;
+}
+
+.search-box .search-input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 0 50px 0 10px; /* padding-right = button width */
+  border: solid 1px $color-dark-gray;
+  border-radius: 3px;
+  color: $color-light-black;
+  outline: none;
+  //box-shadow: 0px 0px 3px 2px $color-light-gray;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.search-box .search-input:focus {
+  border-color: $color-dark-gray;
+  box-shadow: 0px 0px 4px 2px $color-light-gray;
+}
+
+/* Placeholder */
+.search-box .search-input::-webkit-input-placeholder { color: #bfbfbf; }
+.search-box .search-input::-moz-placeholder          { color: #bfbfbf; opacity: 1; }
+.search-box .search-input:-ms-input-placeholder      { color: #bfbfbf; }
+
+/* Icon */
+.search-box .search-icon {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  top: 1px; /* Keep away */
+  right: 1px; /* from */
+  bottom: 1px; /* border */
+  width: 50px;
+  line-height: 38px; /* 40 - 1 - 1 */
+  font-size: 20px;
+  text-align: center;
+  color: $color-dark-gray;
+  transition: transform 0.2s ease;
+}
+
+/* Button */
+.search-box .search-button {
+  position: absolute;
+  z-index: 1;
+  top: -5px; /* using negative values, so that on touch */
+  right: 1px;
+  bottom: -5px; /* devices it would be easier to hit */
+  width: 50px;
+  border: none;
+  overflow: hidden; /* Just to be sure */
+  opacity: 0; /* hidden */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; /* IE8 */
+}
+
+.header-user {
+  @include make-md-column(2);
+  @include make-md-column-offset(2);
+
+  width: 100%;
+  padding: 0;
+  margin-top: 30px;
+  color: $color-dark-gray;
+
+  button {
+    background: none;
+    border: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    i {
+      padding-right: 7px;
+    }
+
+    span {
+      margin-left: 7px;
+    }
+  }
+
+  .dropdown-menu {
+    border-radius: 0;
+  }
+
+  .open>.btn-default.dropdown-toggle {
+
+  }
+
+  &:hover {
+    color: $color-dark-gray;
+
+    p {
+      text-decoration: underline;
+    }
+  }
+}
+
+.navi {
+  width: 100%;
+  height: 45px;
+  background-color: $color-white;
+  border-top: solid 1px $color-dark-gray;
+  box-shadow: 0 4px 2px -2px  $color-dark-gray;
+
+  ul {
+    @include make-md-column(8);
+    @include make-md-column-offset(2);
+    padding-bottom: 10px;
+    margin-bottom: 0;
+
+    li {
+      display: block;
+      float: left;
+      width: 20%;
+      height: 45px;
+      margin-bottom: 10px;
+
+      a {
+        display: block;
+        height: 55px;
+        padding-bottom: 15px;
+        line-height: 45px;
+        color: $color-dark-black;
+
+        font-size: 17px;
+        text-align: center;
+      }
+
+      &.active {
+        background-color: $color-red;
+
+
+        a {
+          color: $color-white;
+          background: transparent url("../image/triangle.png") center 43px no-repeat;
+
+          &:hover {
+          text-decoration: none;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -162,6 +329,251 @@ nav {
 
     height: 300px;
     padding: 75px 0;
+  }
+}
+
+.content-trefferliste {
+  margin-top: 156px;
+
+  .title {
+    @include make-md-column(12);
+  }
+
+  .trefferliste-filter {
+    @include make-md-column(12);
+    margin-top: 15px;
+    font-weight: 300;
+    letter-spacing: 0.7px;
+  }
+
+  button {
+    @include make-md-column(2);
+
+    padding: 0;
+    margin-left: 0;
+    border: 0;
+    background: none;
+    text-align: left;
+
+    span {
+      margin-left: 20px;
+    }
+  }
+
+  .dropdown-menu {
+    top: 25px;
+    padding: 5px;
+    margin-left: 10px;
+    border-radius: 0;
+
+    a {
+      padding: 5px 0;
+      font-weight: 300;
+    }
+  }
+
+  button, .trefferliste-checkbox {
+    display: block;
+    float: left;
+  }
+
+  span.trefferliste-checkbox {
+    @include make-md-column(2);
+
+    label {
+      @include text-font-family;
+      font-weight: 300;
+    }
+  }
+
+  input[type='checkbox'] {
+      position: relative;
+      left: -999em;
+  }
+
+  input[type='checkbox'] + span.checkbox-target:after {
+      font-family: FontAwesome;
+      content: "\f096";
+  }
+
+  input[type='checkbox']:checked + span.checkbox-target:after {
+      font-family: FontAwesome;
+      content: "\f046";
+  }
+
+  .trefferlist-display-switch {
+    @include make-md-column(2);
+    @include make-md-column-offset(4);
+
+
+    ul {
+      display: block;
+      float: right;
+      height: 35px;
+      list-style-type: none;
+
+      li {
+        display: block;
+        float:left;
+      	width:44px;
+      	height:36px;
+
+        background-image: url(../image/switch-button.png);
+      	border: solid 1px $color-light-gray;
+        box-shadow: 0px 0px 5px 0px $color-light-gray;
+      }
+
+      #switch-button-1 {
+        background-position-x: -2px;
+      }
+
+      #switch-button-2 {
+        background-position-x: -47px;
+      }
+    }
+
+    ul .turnon{
+    	background-position-y: -36px;
+    }
+  }
+}
+
+.content-wrapper {
+
+  //display with box
+  .display-1 dd {
+    @include make-md-column(4);
+    height: 300px;
+
+    .content-detail {
+      position: relative;
+      background: $color-white;
+      box-shadow: 0 0 15px 0 $color-light-gray;
+
+      .content-title {
+        display: block;
+        height: 50px;
+        padding-left: 25px;
+        line-height: 50px;
+        font-size: 16px;
+        z-index: 200px;
+
+        a {
+          color: $color-dark-black;
+        }
+      }
+
+      .content-img-beschreibung {
+        img {
+          position: absolute;
+          width: 100%;
+          z-index: -100px;
+        }
+
+        &:hover {
+          .content-beschreibung {
+            display: block;
+          }
+        }
+      }
+
+      .content-beschreibung {
+        display: none;
+        position: absolute;
+        height: 150px;
+        top: 138px;
+        font-size: 15px;
+        font-weight: 300;
+        z-index: 200px;
+        background: $color-tra-white;
+
+        p {
+          display: block;
+          padding: 5px 25px;
+
+          a {
+            color: $color-light-black;
+          }
+        }
+
+        .star-share {
+          display: block;
+          float: right;
+          padding: 0 25px 10px;
+
+          a {
+            display: block;
+            float: left;
+            margin-left: 10px;
+            color: $color-dark-gray;
+
+            &:hover {
+              color: $color-light-black;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //display with list
+  .display-2 dd {
+    @include make-md-column(12);
+    height: 120px;
+    margin-bottom: 40px;
+
+    .content-detail {
+      position: relative;
+      height: 120px;
+      background: $color-white;
+      box-shadow: 0 0 15px 0 $color-light-gray;
+
+      .content-title {
+        @include make-md-column(10);
+        @include make-md-column-offset(2);
+
+        a {
+          display: block;
+          height: 40px;
+          line-height: 50px;
+          color: $color-dark-black;
+        }
+      }
+
+      .content-img-beschreibung {
+        img {
+          @include make-md-column(2);
+          display: block;
+          float: left;
+          margin-top: -33px;
+        }
+
+        .content-beschreibung {
+          @include make-md-column(10);
+          display: block;
+          float: left;
+          font-weight: 300;
+
+          a {
+            color: $color-dark-black;
+          }
+
+          .star-share {
+            a {
+              color: $color-dark-gray;
+
+              &:hover {
+                color: $color-light-black;
+              }
+            }
+          }
+
+        }
+      }
+
+
+    }
+
   }
 }
 
