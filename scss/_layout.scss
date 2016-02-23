@@ -214,6 +214,7 @@ nav {
   }
 }
 
+//Page Landingpage
 .content-login {
   @include make-md-column(6);
   @include make-md-column-offset(3);
@@ -233,7 +234,6 @@ nav {
     height: 370px;
   }
 }
-
 
 .content-login, .content-preis-collapse {
   button {
@@ -424,6 +424,23 @@ nav {
   }
 }
 
+// Styling Checkbox
+input[type='checkbox'] {
+    position: relative;
+    left: -999em;
+}
+
+input[type='checkbox'] + span.checkbox-target:after {
+    font-family: FontAwesome;
+    content: "\f096";
+}
+
+input[type='checkbox']:checked + span.checkbox-target:after {
+    font-family: FontAwesome;
+    content: "\f046";
+}
+
+//Page Trefferlist
 .content-trefferliste {
   margin-top: 156px;
 
@@ -478,20 +495,7 @@ nav {
     }
   }
 
-  input[type='checkbox'] {
-      position: relative;
-      left: -999em;
-  }
 
-  input[type='checkbox'] + span.checkbox-target:after {
-      font-family: FontAwesome;
-      content: "\f096";
-  }
-
-  input[type='checkbox']:checked + span.checkbox-target:after {
-      font-family: FontAwesome;
-      content: "\f046";
-  }
 
   .trefferlist-display-switch {
     @include make-md-column(2);
@@ -659,13 +663,80 @@ nav {
               }
             }
           }
-
         }
       }
-
-
     }
+  }
+}
 
+//Page Anmelden
+.content-login-img, .content-login-form{
+  @include make-md-column(4);
+
+  margin-top: 90px;
+}
+
+.content-login-img {
+  @include make-md-column-offset(1);
+
+  padding: 50px;
+}
+
+.content-login-form {
+  @include make-md-column-offset(2);
+
+  display: block;
+  padding: 125px 0;
+
+  h1, p {
+    @include make-md-column(6);
+    padding-left: 0;
+  }
+
+  h1+ p {
+    margin-top: 31px;
+  }
+
+  input {
+    @include make-md-column(12);
+    height: 35px;
+    margin: 10px auto 5px;
+    border: solid 1px $color-dark-gray;
+    background: $base-bg-color;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .login-checkbox {
+    @include make-md-column(6);
+    height: 35px;
+    padding: 0;
+
+    label {
+      height: 35px;
+      margin-top: -30px;
+    }
+  }
+
+  .login-button {
+    @include make-md-column(6);
+
+    height: 35px;
+    margin-top: 10px;
+    border: none;
+    background: $color-red;
+    color: $color-white;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .login-reset {
+    @include make-md-column(12);
+    padding: 20px 0 0 0;
   }
 }
 
