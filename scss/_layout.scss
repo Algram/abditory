@@ -33,10 +33,10 @@ nav {
 }
 
 .header {
-  height: 80px;
+  height: 60px;
   background: $color-white;;
   color: $color-blue;
-  box-shadow: 0 4px 2px -2px $color-dark-gray;
+  box-shadow: 0 2px 2px -2px $color-dark-gray;
 }
 
 .header-logo {
@@ -45,6 +45,7 @@ nav {
 
   img {
     height: 80px;
+    margin-top: -10px;
   }
 }
 
@@ -53,6 +54,7 @@ nav {
 
   img {
     height: 80px;
+    margin-top: -10px;
   }
 }
 
@@ -67,7 +69,7 @@ nav {
   position: relative;
   height: 40px; /* Define the search box height and width here */
   width: 100%;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .search-box .search-input {
@@ -75,7 +77,7 @@ nav {
   width: 100%;
   height: 100%;
   padding: 0 50px 0 10px; /* padding-right = button width */
-  border: solid 1px $color-dark-gray;
+  border: solid 1px $color-light-gray;
   border-radius: 3px;
   color: $color-light-black;
   outline: none;
@@ -129,7 +131,7 @@ nav {
 
   width: 100%;
   padding: 0;
-  margin-top: 30px;
+  margin-top: 20px;
   color: $color-dark-gray;
 
   button {
@@ -168,10 +170,10 @@ nav {
 
 .navi {
   width: 100%;
-  height: 45px;
+  height: 40px;
   background-color: $color-white;
-  border-top: solid 1px $color-dark-gray;
-  box-shadow: 0 4px 2px -2px  $color-dark-gray;
+  border-top: solid 1px $color-light-gray;
+  box-shadow: 0 2px 2px -2px  $color-dark-gray;
 
   ul {
     @include make-md-column(8);
@@ -183,27 +185,26 @@ nav {
       display: block;
       float: left;
       width: 20%;
-      height: 45px;
+      height: 40px;
       margin-bottom: 10px;
 
       a {
         display: block;
-        height: 55px;
-        padding-bottom: 15px;
-        line-height: 45px;
+        height: 50px;
+        padding-bottom: 10px;
+        line-height: 36px;
         color: $color-dark-black;
 
-        font-size: 17px;
+        font-size: 16px;
         text-align: center;
       }
 
       &.active {
         background-color: $color-red;
 
-
         a {
           color: $color-white;
-          background: transparent url("../image/triangle.png") center 43px no-repeat;
+          background: transparent url("../image/triangle.png") center 38px no-repeat;
 
           &:hover {
           text-decoration: none;
@@ -219,11 +220,11 @@ nav {
   @include make-md-column(6);
   @include make-md-column-offset(3);
 
-  padding: 140px 0 50px 0;
+  padding: 120px 0 30px 0;
   text-align: center;
 
   p {
-    padding-bottom: 50px;
+    padding-bottom: 20px;
   }
 }
 
