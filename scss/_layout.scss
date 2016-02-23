@@ -671,24 +671,29 @@ input[type='checkbox']:checked + span.checkbox-target:after {
 
 //Page Anmelden
 .content-login-img, .content-login-form{
-  @include make-md-column(4);
+  @include make-sm-column(4);
 
   margin-top: 90px;
 }
 
 .content-login-img {
-  @include make-md-column-offset(1);
+  @include make-sm-column-offset(1);
 
   padding: 50px;
 }
 
 .content-login-form {
-  @include make-md-column-offset(2);
+  @include make-sm-column-offset(2);
 
   display: block;
-  padding: 125px 0;
+
+  @media (min-width: $screen-md-min) {
+    padding: 125px 0;
+  }
+
 
   h1, p {
+    @include make-sm-column(12);
     @include make-md-column(6);
     padding-left: 0;
   }
@@ -698,8 +703,9 @@ input[type='checkbox']:checked + span.checkbox-target:after {
   }
 
   input {
-    @include make-md-column(12);
+    @include make-sm-column(12);
     height: 35px;
+    padding: 0 5px;
     margin: 10px auto 5px;
     border: solid 1px $color-dark-gray;
     background: $base-bg-color;
@@ -710,7 +716,9 @@ input[type='checkbox']:checked + span.checkbox-target:after {
   }
 
   .login-checkbox {
+    @include make-sm-column(12);
     @include make-md-column(6);
+
     height: 35px;
     padding: 0;
 
@@ -721,6 +729,7 @@ input[type='checkbox']:checked + span.checkbox-target:after {
   }
 
   .login-button {
+    @include make-sm-column(12);
     @include make-md-column(6);
 
     height: 35px;
@@ -735,7 +744,7 @@ input[type='checkbox']:checked + span.checkbox-target:after {
   }
 
   .login-reset {
-    @include make-md-column(12);
+    @include make-sm-column(12);
     padding: 20px 0 0 0;
   }
 }
