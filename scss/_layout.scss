@@ -541,7 +541,8 @@ input[type='checkbox']:checked + span.checkbox-target:after {
   //display with box
   .display-1 dd {
     @include make-md-column(4);
-    height: 300px;
+    height: 289px;
+    margin: 15px 0;
 
     .content-detail {
       position: relative;
