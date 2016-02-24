@@ -1,0 +1,61 @@
+.header-img {
+  margin-top: 100px;
+
+  .container {
+    height: 212px;
+  }
+}
+
+.header-img-gruppen {
+  background: url("../image/gruppen/gruppen-header.jpg");
+  background-size: cover;
+}
+
+.content-suche {
+  @include make-md-column(8);
+  @include make-md-column-offset(2);
+
+  margin: 35px 0 0;
+}
+
+.content-wrapper {
+
+  .content-smallbox dd{
+    @include make-md-column(3);
+    height: 219px;
+    margin: 15px 0;
+
+    .content-detail {
+
+      .content-title {
+        height: 40px;
+        padding-left: 10px;
+        font-size: 12px;
+        line-height: 40px;
+
+        i {
+          display: block;
+          float: right;
+          padding-right: 5px;
+          line-height: 40px;
+        }
+      }
+
+      .content-beschreibung {
+        height: 180px;
+        top: 40px;
+        padding: 20px;
+      }
+    }
+  }
+}
+
+.content-mehr {
+  height: 100px;
+  padding: 30px 0;
+  text-align: center;
+
+  i {
+    font-size: 30px;
+  }
+}
