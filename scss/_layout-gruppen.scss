@@ -22,8 +22,16 @@
 
   .content-smallbox dd{
     @include make-md-column(3);
-    height: 219px;
+    height: 275px;
     margin: 15px 0;
+
+    @media (min-width: $screen-md-min) {
+      height: 185px;
+    }
+
+    @media (min-width: $screen-lg-min) {
+      height: 219px;
+    }
 
     .content-detail {
 
@@ -42,9 +50,19 @@
       }
 
       .content-beschreibung {
-        height: 180px;
+        height: 235px;
         top: 40px;
-        padding: 20px;
+        padding: 60px 20px;
+
+        @media (min-width: $screen-md-min) {
+          height: 145px;
+          padding: 7px;
+        }
+
+        @media (min-width: $screen-lg-min) {
+          height: 180px;
+          padding: 25px 20px;
+        }
       }
     }
   }
