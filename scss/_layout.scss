@@ -443,7 +443,7 @@ input[type='checkbox']:checked + span.checkbox-target:after {
 
 //Page Trefferlist
 .content-trefferliste {
-  margin-top: 156px;
+  margin-top: 120px;
 
   .title {
     @include make-md-column(12);
@@ -451,9 +451,8 @@ input[type='checkbox']:checked + span.checkbox-target:after {
 
   .trefferliste-filter {
     @include make-md-column(12);
-    margin-top: 15px;
+    margin-top: 10px;
     font-weight: 300;
-    letter-spacing: 0.7px;
   }
 
   button {
@@ -466,14 +465,14 @@ input[type='checkbox']:checked + span.checkbox-target:after {
     text-align: left;
 
     span {
-      margin-left: 20px;
+      margin-top: -1px;
     }
   }
 
   .dropdown-menu {
-    top: 25px;
-    padding: 5px;
-    margin-left: 10px;
+    top: 20px;
+    padding: 5px 10px;
+    margin-left: 14px;
     border-radius: 0;
 
     a {
