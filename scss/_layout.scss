@@ -3,7 +3,7 @@ body {
   @include text-font-family;
 }
 
-h1,h2 {
+h1,h2,h3 {
   @include headline-font-family;
   font-weight: 300;
 }
@@ -17,6 +17,10 @@ h2 {
 }
 
 h3 {
+  font-size: 24px;
+}
+
+h4 {
   font-size: 18px;
 }
 
@@ -304,11 +308,11 @@ nav {
         &:first-child {
           background: $color-light-black;
 
-          h3, p {
+          h4, p {
             color: $color-white;
           }
 
-          h3 {
+          h4 {
             padding: 15px 0 5px;
           }
 
@@ -394,7 +398,7 @@ nav {
       margin:auto;
     }
 
-    h3, p {
+    h4, p {
       color: $color-white;
       text-align: center;
     }
@@ -582,7 +586,7 @@ input[type='checkbox']:checked + span.checkbox-target:after {
         height: 50px;
         padding-left: 25px;
         line-height: 50px;
-        font-size: 16px;
+        font-size: 14px;
         z-index: 200px;
 
         a {
