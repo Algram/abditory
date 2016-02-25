@@ -254,7 +254,7 @@ nav {
 }
 
 //Page Landingpage
-.content-login {
+.content-title-text {
   @include make-md-column(6);
   @include make-md-column-offset(3);
 
@@ -274,7 +274,7 @@ nav {
   }
 }
 
-.content-login, .content-preis-collapse {
+.content-title-text, .content-preis-collapse {
   button {
     @include make-xs-column(10);
     @include make-xs-column-offset(1);
