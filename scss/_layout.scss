@@ -57,18 +57,19 @@ nav {
 }
 
 .header-login {
-  @include make-sm-column(3);
-  @include make-sm-column-offset(7);
-  @include make-md-column(3);
-  @include make-md-column-offset(6);
-  @include make-lg-column(2);
-  @include make-lg-column-offset(2);
+  @include make-sm-column(2);
+  @include make-sm-column-offset(8);
+  @include make-md-column(2);
+  @include make-md-column-offset(7);
+  @include make-lg-column(1);
+  @include make-lg-column-offset(3);
 
   a {
     display: block;
     width: 100%;
     height: 40px;
     margin-top: 10px;
+    font-size: 12px;
     line-height: 40px;
     text-align: center;
     color: $color-red;
