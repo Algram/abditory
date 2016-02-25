@@ -44,8 +44,12 @@
         i {
           display: block;
           float: right;
-          padding-right: 5px;
+          padding-right: 10px;
           line-height: 40px;
+
+          &:before {
+            padding-right: 2px;
+          }
         }
       }
 
