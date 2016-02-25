@@ -14,6 +14,7 @@ $color-white: #FFFFFF;
 $color-dark-white: #F2F2F2;
 
 $color-tra-white: rgba(255,255,255, 0.7);
+$color-tra-white-2: rgba(255,255,255, 0.3);
 
 $base-bg-color: $color-dark-white;
 $second-bg-color: $color-light-black;
@@ -25,4 +26,86 @@ $second-bg-color: $color-light-black;
 
 @mixin text-font-family {
   font-family: 'Lato', sans-serif;
+}
+
+@mixin grid-box {
+  .content-detail {
+    position: relative;
+    background: $color-white;
+    box-shadow: 0 0 2px 0 darken($color-light-gray, 10);
+
+    .content-title {
+      display: block;
+      height: 50px;
+      padding-left: 25px;
+      line-height: 50px;
+      font-size: 14px;
+      z-index: 200px;
+
+      a {
+        color: $color-dark-black;
+      }
+    }
+
+    .content-img-beschreibung {
+      img {
+        position: absolute;
+        width: 100%;
+        box-shadow: 0 0 2px 0 darken($color-light-gray, 10);
+      }
+
+      &:hover {
+        .content-beschreibung {
+          display: block;
+        }
+      }
+    }
+
+    .content-beschreibung {
+      display: none;
+      position: absolute;
+      height: 150px;
+      top: 128px;
+      font-size: 14px;
+      font-weight: 300;
+      z-index: 200px;
+      background: $color-tra-white;
+
+      @media (min-width: $screen-md-min) {
+        height: 157px;
+        top: 87px;
+      }
+
+      @media (min-width: $screen-lg-min) {
+        height: 150px;
+        top: 138px;
+      }
+
+      p {
+        display: block;
+        padding: 5px 25px;
+
+        a {
+          color: $color-light-black;
+        }
+      }
+
+      .star-share {
+        display: block;
+        float: right;
+        padding: 0 25px 10px;
+
+        a {
+          display: block;
+          float: left;
+          margin-left: 10px;
+          color: $color-dark-gray;
+
+          &:hover {
+            color: $color-light-black;
+          }
+        }
+      }
+    }
+  }
 }
