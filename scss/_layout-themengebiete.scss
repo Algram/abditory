@@ -1,0 +1,42 @@
+.header-img-themengebiete {
+  height: 207px;
+  background-color: $color-light-black;
+
+  .header-img-row {
+    .img-row {
+      max-width: 100%;
+      overflow: hidden;
+      overflow-x: scroll;
+    }
+
+    ul {
+      display: block;
+      width: 800%;
+      padding: 20px 20px;
+      list-style: none;
+
+      @media (min-width: $screen-md-min) {
+        width: 400%;
+      }
+
+      @media (min-width: $screen-lg-min) {
+        width: 300%;
+      }
+    }
+
+    img {
+      display: block;
+      margin: 0;
+    }
+
+    li {
+      float: left;
+      width: 210px;
+      margin: 0 10px;
+    }
+  }
+}
+
+.content-themengebiete {
+  margin-top: 40px;
+}
