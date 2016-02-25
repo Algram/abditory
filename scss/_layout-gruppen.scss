@@ -54,6 +54,12 @@
         top: 40px;
         padding: 60px 20px;
 
+        a {
+          display: block;
+          padding-top: 15px;
+          float: right;
+        }
+
         @media (min-width: $screen-md-min) {
           height: 145px;
           padding: 7px;
