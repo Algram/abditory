@@ -605,89 +605,7 @@ input[type='checkbox']:checked + span.checkbox-target:after {
       height: 289px;
     }
 
-    .content-detail {
-      position: relative;
-      background: $color-white;
-      box-shadow: 0 0 2px 0 darken($color-light-gray, 10);
-
-      .content-title {
-        display: block;
-        height: 50px;
-        padding-left: 25px;
-        line-height: 50px;
-        font-size: 14px;
-        z-index: 200px;
-
-        a {
-          color: $color-dark-black;
-        }
-      }
-
-      .content-img-beschreibung {
-        img {
-          position: absolute;
-          width: 100%;
-          box-shadow: 0 0 2px 0 darken($color-light-gray, 10);
-        }
-
-        &:hover {
-          .content-beschreibung {
-            display: block;
-          }
-        }
-      }
-
-      .content-beschreibung {
-        display: none;
-        position: absolute;
-        height: 150px;
-        top: 128px;
-        font-size: 14px;
-        font-weight: 300;
-        z-index: 200px;
-        background: $color-tra-white;
-
-        @media (min-width: $screen-md-min) {
-          height: 157px;
-          top: 87px;
-        }
-
-        @media (min-width: $screen-lg-min) {
-          height: 150px;
-          top: 138px;
-        }
-
-        p {
-          display: block;
-          padding: 15px 20px;
-
-          a {
-            color: $color-light-black;
-          }
-        }
-
-        .star-share {
-          display: block;
-          float: right;
-          padding: 0 25px 10px;
-
-          a {
-            display: block;
-            float: left;
-            margin-left: 10px;
-            color: $color-dark-gray;
-
-            &:hover {
-              color: $color-light-black;
-            }
-
-            i:before {
-              padding-right: 2px;
-            }
-          }
-        }
-      }
-    }
+    @include grid-box;
   }
 
   //display with list
@@ -758,10 +676,6 @@ input[type='checkbox']:checked + span.checkbox-target:after {
 
               &:hover {
                 color: $color-light-black;
-              }
-
-              i:before {
-                padding-right: 2px;
               }
             }
           }
