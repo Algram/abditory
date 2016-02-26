@@ -55,6 +55,12 @@ $second-bg-color: $color-light-black;
       }
 
       &:hover {
+        img {
+          width: 100%;
+          -webkit-filter: blur(1px);
+	        filter: blur(1px);
+        }
+
         .content-beschreibung {
           display: block;
         }
