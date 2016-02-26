@@ -44,8 +44,12 @@
         i {
           display: block;
           float: right;
-          padding-right: 5px;
+          padding-right: 10px;
           line-height: 40px;
+
+          &:before {
+            padding-right: 2px;
+          }
         }
       }
 
@@ -53,6 +57,12 @@
         height: 235px;
         top: 40px;
         padding: 60px 20px;
+
+        a {
+          display: block;
+          padding-top: 15px;
+          float: right;
+        }
 
         @media (min-width: $screen-md-min) {
           height: 145px;
