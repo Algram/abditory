@@ -1,3 +1,8 @@
+.header-img-meine {
+  background: url('../image/meine/meine-header.jpg');
+  background-size: cover;
+}
+
 .content-meine {
   @include make-xs-column(12);
   @include make-md-column(12);
