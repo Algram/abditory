@@ -677,6 +677,10 @@ input[type='checkbox']:checked + span.checkbox-target:after {
               &:hover {
                 color: $color-light-black;
               }
+
+              i:before {
+                padding-right: 2px;
+              }
             }
           }
         }

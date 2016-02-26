@@ -89,7 +89,7 @@ $second-bg-color: $color-light-black;
 
       p {
         display: block;
-        padding: 5px 25px;
+        padding: 15px 20px;
 
         a {
           color: $color-light-black;
@@ -109,6 +109,10 @@ $second-bg-color: $color-light-black;
 
           &:hover {
             color: $color-light-black;
+          }
+
+          i:before {
+            padding-right: 2px;
           }
         }
       }
