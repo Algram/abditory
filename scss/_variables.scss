@@ -28,6 +28,19 @@ $second-bg-color: $color-light-black;
   font-family: 'Lato', sans-serif;
 }
 
+@mixin content-title-style {
+  display: block;
+  height: 50px;
+  padding-left: 25px;
+  line-height: 50px;
+  font-size: 14px;
+  z-index: 200px;
+
+  a {
+    color: $color-dark-black;
+  }
+}
+
 @mixin grid-box {
   .content-detail {
     position: relative;
@@ -35,16 +48,7 @@ $second-bg-color: $color-light-black;
     box-shadow: 0 0 2px 0 darken($color-light-gray, 10);
 
     .content-title {
-      display: block;
-      height: 50px;
-      padding-left: 25px;
-      line-height: 50px;
-      font-size: 14px;
-      z-index: 200px;
-
-      a {
-        color: $color-dark-black;
-      }
+      @include content-title-style;
     }
 
     .content-img-beschreibung {

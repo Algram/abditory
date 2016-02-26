@@ -1,0 +1,52 @@
+.content-arbeitsblaetter {
+  margin-top: 20px;
+
+  .trefferliste-filter {
+    @include make-sm-column(3);
+    @include make-md-column(2);
+
+    button {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+.content-wrapper {
+
+  .display-arbeitsblaetter dd {
+    @include make-sm-column(6);
+    @include make-md-column(4);
+    height: 600px;
+    margin: 15px 0;
+    font-size: 14px;
+    font-weight: 300;
+
+
+    .content-title {
+      @include content-title-style;
+
+      background: $color-white;
+      padding: 15px;
+      font-weight: 400;
+    }
+
+    .content-arbeitsblaetter-detail {
+      padding: 15px;
+      height: 550px;
+      background: $color-white;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .content-arbeitsblaetter-print {
+      display: block;
+      position: absolute;
+      bottom: 20px;
+      right: 25px;
+      font-size: 14px;
+    }
+  }
+}
