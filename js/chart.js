@@ -9,7 +9,7 @@ window.addEventListener('DOMContentLoaded', function() {
     var chartOptions = {
         bindto: "#chart",
         data: {
-            url: 'chart.json',
+            url: 'js/chart.json',
             mimeType: 'json',
             type: 'bar',
             colors: {
