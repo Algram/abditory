@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <!-- Libs D3.js & C3.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300|Cabin:400,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <!-- Abditory -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/chart.js"></script>
+  </head>
+  <body>
+    <nav>
+      <div class="grid-content header">
+        <div class="container">
+          <div class="row ">
+            <div class="header-logo-small">
+              <a href="meine_statistiken.html">
+                <img src="image/logo2.png" alt="">
+              </a>
+            </div>
+            <div class="header-suche">
+              <form action="trefferliste.html">
+                <div class="search-box">
+                  <input class="search-input" type="text" placeholder="Search for something...">
+                  <input class="search-button" type="submit" value="Search">
+                  <i class="search-icon fa fa-search"></i>
+                </div>
+              </form>
+            </div>
+            <div class="dropdown header-user">
+              <button class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <i class="fa fa-user"></i>
+                Max Mustermann
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Abmelden</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid-content navi">
+        <div class="container">
+          <div class="row">
+            <ul>
+              <li class="">
+                <a href="entdecken.html">
+                  Entdecken
+                </a>
+              </li>
+              <li class="active">
+                <a href="meine_statistiken.html">
+                  Meine Statistiken
+                </a>
+              </li>
+              <li>
+                <a href="faecher.html">
+                  Fächer
+                </a>
+              </li>
+              <li>
+                <a href="arbeitsblaetter.html">
+                  Arbeitsblätter
+                </a>
+              </li>
+              <li>
+                <a href="gruppen.html">
+                  Gruppen
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="grid-content">
+      <div class="container">
+        <div class="row">
+          <div class="content-detail-page">
+            <h3>
+              Lorem ipsum dolor sit amet,nsectetuer adipiscing elit
+              <i class="fa fa-star"></i>
+              <i class="fa fa-share-alt"></i>
+            </h3>
+            <p>
+              <i class="fa fa-tags"></i>
+              Lorem ipsum, consectetuer, Aenean commodo, sum dolor sit
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart -->
+    <div class="grid-content">
+      <div class="container">
+        <div class="row">
+          <div class="content-detail-main">
+            <div class="detail-main">
+
+
+              <!-- SVG Canvas -->
+              <div id="chart"></div>
+
+              <!-- Configuration -->
+              <div id="configuration">
+                  <div id="color-scheme-selector" class="btn-group">
+                      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Color-Schemes <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu">
+                          <li><a href="#" data-cmd="changeColor" data-color-scheme="scheme1">Color-Scheme #1</a></li>
+                          <li><a href="#" data-cmd="changeColor" data-color-scheme="scheme2">Color-Scheme #2</a></li>
+                          <li><a href="#" data-cmd="changeColor" data-color-scheme="scheme3">Colorless</a></li>
+                      </ul>
+                  </div>
+
+                  <div id="color-scheme-picker">
+                      <button data-cmd="pickScheme" class="btn btn-default btn-pick-scheme">Pick Color Scheme</button>
+                  </div>
+
+                  <div id="pick-a-scheme-modal" class="modal fade" tabindex="-1" role="dialog">
+                      <div class="modal-dialog">
+                          <div class="modal-content">
+                              <div class="modal-header">
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                  <h4 class="modal-title">Pick Your Colors</h4>
+                              </div>
+                              <div class="modal-body">
+                                  <input type="color" class="form-control" id="color1" placeholder="data1">
+                                  <input type="color" class="form-control" id="color2">
+                                  <input type="color" class="form-control" id="color3">
+                              </div>
+                              <div class="modal-footer">
+                                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                  <button type="button" class="btn btn-primary" id="set-scheme-save">Save changes</button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div id="x-label-change" class="modal fade" tabindex="-1" role="dialog">
+                      <div class="modal-dialog">
+                          <div class="modal-content">
+                              <div class="modal-header">
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                  <h4 class="modal-title">Change X-Axis Label</h4>
+                              </div>
+                              <div class="modal-body">
+                                  <input type="text" class="form-control" id="set-x-label" placeholder="New Label Name">
+                              </div>
+                              <div class="modal-footer">
+                                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                  <button type="button" class="btn btn-primary" id="set-x-label-save">Save changes</button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div id="y-label-change" class="modal fade" tabindex="-1" role="dialog">
+                      <div class="modal-dialog">
+                          <div class="modal-content">
+                              <div class="modal-header">
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                  <h4 class="modal-title">Change Y-Axis Label</h4>
+                              </div>
+                              <div class="modal-body">
+                                  <input type="text" class="form-control" id="set-y-label" placeholder="New Label Name">
+                              </div>
+                              <div class="modal-footer">
+                                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                  <button type="button" class="btn btn-primary" id="set-y-label-save">Save changes</button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Transformation -->
+              <div id="transformation">
+                  <button data-cmd="transform" data-transform="line" class="btn btn-default btn-transform">Line Chart</button>
+                  <button data-cmd="transform" data-transform="bar" class="btn btn-default btn-transform">Bar Chart</button>
+                  <button data-cmd="transform" data-transform="pie" class="btn btn-default btn-transform">Pie Chart</button>
+                  <button data-cmd="transform" data-transform="area" class="btn btn-default btn-transform">Area Chart</button>
+                  <button data-cmd="transform" data-transform="donut" class="btn btn-default btn-transform">Donut Chart</button>
+                  <button data-cmd="transform" data-transform="spline" class="btn btn-default btn-transform">Spline Chart</button>
+                  <button data-cmd="transform" data-transform="area-spline" class="btn btn-default btn-transform">Area Spline Chart</button>
+                  <button data-cmd="transform" data-transform="scatter" class="btn btn-default btn-transform">Scatter Plot Chart</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-content">
+      <div class="container">
+        <div class="row">
+          <div class="content-detail-text">
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+            </p>
+            <p>
+              At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            </p>
+            <p>
+              Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+            </p>
+            <p>
+              Quelle: <a href="#">www.govdata.de</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-content content-dark-bg">
+      <div class="container">
+        <div class="row">
+          <div class="footer">
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="js/script.js">
+    </script>
+  </body>
+</html>

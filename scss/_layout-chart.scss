@@ -1,0 +1,22 @@
+#chart {
+    width: 848px;
+    height: 558px;
+}
+
+.tick,
+.c3-axis-x-label,
+.c3-axis-y-label,
+.c3-legend-item text {
+    font-family: "Lato";
+    font-size: 12px;
+}
+
+.c3-axis-x-label:hover,
+.c3-axis-y-label:hover {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+[class*="c3-line-"] {
+  stroke-width: 2px;
+}
