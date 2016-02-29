@@ -32,12 +32,50 @@
 }
 
 .content-detail-main {
-  @include make-md-column(8);
-  @include make-md-column-offset(2);
-  min-height: 505px;
-  padding-left: 0;
+  //@include make-md-column(8);
+  //@include make-md-column-offset(2);
+  //min-height: 505px;
+  //padding-left: 0;
 
   .detail-main {
+    #chart {
+      @include make-md-column(8);
+      @include make-md-column-offset(2);
 
+      height: 458px;
+      padding-left: 0;
+      background: $color-white;
+      border: solid 1px $color-dark-gray;
+      box-shadow: 0 0 5px 0 $color-dark-gray;
+    }
+  }
+
+  #configuration {
+    @include make-md-column(2);
+  }
+
+  #transformation {
+    @include make-md-column(8);
+    @include make-md-column-offset(2);
+
+    padding: 20px 0;
+  }
+
+  .chart-img-row {
+    .img-row {
+      max-width: 100%;
+      overflow: hidden;
+      overflow-x: scroll;
+    }
+
+    ul {
+      list-style: none;
+      width: 300%;
+
+      li {
+        display: block;
+        float: left;
+      }
+    }
   }
 }
