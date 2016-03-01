@@ -146,7 +146,7 @@
     margin: 0;
     background: $color-tra-white;
 
-    @media (min-width: $screen-lg-min) {
+    @media (min-width: $screen-md-min) {
       width: 146px;
       height: 146px;
       padding: 5px;
@@ -203,13 +203,13 @@
       background: $color-tra-white;
 
       @media (min-width: $screen-md-min) {
-        height: 157px;
-        top: 87px;
+        height: 194px;
+        top: 50px;
       }
 
       @media (min-width: $screen-lg-min) {
-        height: 150px;
-        top: 73px;
+        height: 173px;
+        top: 50px;
       }
     }
   }
