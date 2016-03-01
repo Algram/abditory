@@ -123,3 +123,17 @@ $second-bg-color: $color-light-black;
     }
   }
 }
+
+@mixin content-button {
+  button {
+    width: 100%;
+    height: 35px;
+    border: none;
+    background: $color-red;
+    color: $color-white;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

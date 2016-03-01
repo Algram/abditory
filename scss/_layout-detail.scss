@@ -20,7 +20,7 @@
 .content-detail-text {
   @include make-md-column(8);
   @include make-md-column-offset(2);
-  padding-left: 0;
+  padding: 20px 0;
 
   p {
     margin-bottom: 30px;
@@ -32,33 +32,136 @@
 }
 
 .content-detail-main {
-  //@include make-md-column(8);
-  //@include make-md-column-offset(2);
-  //min-height: 505px;
-  //padding-left: 0;
 
   .detail-main {
-    #chart {
+    #chart-canvas {
+      @include make-xs-column(9);
       @include make-md-column(8);
       @include make-md-column-offset(2);
 
       height: 458px;
-      padding-left: 0;
+      padding: 20px 0;
+      background: $color-white;
+      border: solid 1px $color-dark-gray;
+      box-shadow: 0 0 5px 0 $color-dark-gray;
+
+      #chart {
+        height: 100%;
+      }
+
+      #button-chart-process {
+        position: absolute;
+
+        top: 10px;
+        right: 10px;
+        z-index: 200;
+
+        i {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+
+  #configuration {
+    @include make-xs-column(3);
+    @include make-md-column(2);
+
+    #color-scheme-selector {
+      width: 100%;
+    }
+
+    ul {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      float: left;
+      list-style: none;
+      background: $color-white;
+      border: solid 1px $color-dark-gray;
+      box-shadow: 0 0 5px 0 $color-dark-gray;
+
+      li {
+        width: 100%;
+        height: 35px;
+        padding: 5px 0;
+
+        a {
+          display: block;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        &:first-child {
+          text-align: center;
+        }
+
+        + li {
+          border-bottom: solid 1px $color-dark-gray;
+        }
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+
+  #color-scheme-picker {
+    button {
+      width: 100%;
+      height: 40px;
+      padding: 0;
+      line-height: 40px;
+      border-radius: 0;
       background: $color-white;
       border: solid 1px $color-dark-gray;
       box-shadow: 0 0 5px 0 $color-dark-gray;
     }
   }
 
-  #configuration {
-    @include make-md-column(2);
-  }
-
   #transformation {
+    @include make-xs-column(9);
     @include make-md-column(8);
     @include make-md-column-offset(2);
 
     padding: 20px 0;
+  }
+
+  .content-export {
+    @include make-xs-column(3);
+    @include make-md-column(2);
+    @include content-button;
+
+    .dropdown-menu {
+      width: 100%;
+      border-radius: 0;
+      li {
+        a {
+          text-align: center;
+
+          i {
+            font-size: 18px;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  #content-save {
+    @include make-xs-column(3);
+    @include make-md-column(2);
+    margin-top: -35px;
+
+    @include content-button;
+
+    .fa-floppy-o {
+      margin-right: 5px;
+      font-size: 18px;
+    }
   }
 
   .chart-img-row {
@@ -66,6 +169,8 @@
       max-width: 100%;
       overflow: hidden;
       overflow-x: scroll;
+      background: $color-white;
+      box-shadow: 0 0 5px 0 $color-dark-gray;
     }
 
     ul {
@@ -75,7 +180,58 @@
       li {
         display: block;
         float: left;
+        margin-right: 5px;
+      }
+    }
+
+    .btn-transform {
+      background: $color-white;
+      border: none;
+
+      img {
+        -webkit-filter: grayscale(100%);
+      }
+
+      &:focus {
+        outline: none;
+
+        img {
+          -webkit-filter: grayscale(0);
+        }
       }
     }
   }
+
+  #x-label-change, #y-label-change, #pick-a-scheme-modal {
+    .modal-content {
+      border-radius: 0;
+
+      .modal-body {
+        input {
+          border-radius: 0;
+        }
+      }
+
+      button {
+        border-radius: 0;
+      }
+
+      #set-x-label-save, #set-y-label-save, #set-scheme-save {
+        background: $color-red;
+        border: 1px solid $color-red;
+      }
+    }
+  }
+}
+
+.chart-process {
+  display: none;
+}
+
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
 }

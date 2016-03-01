@@ -120,137 +120,198 @@
 
 
               <!-- SVG Canvas -->
-              <div id="chart"></div>
+              <div id="chart-canvas">
+                <div id="chart"></div>
+                <div id="button-chart-process">
+                  <i class="fa fa-pencil"></i>
+                </div>
+              </div>
+
+
+              <!-- Export button -->
+              <div class="content-export display-block">
+                <div class="dropdown">
+                  <button class="dropdown-toggle" type="button" id="dropdownMenu-export" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    Exportieren als
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu-export">
+                    <li>
+                      <a href="#">
+                        <i class="fa fa-link"></i>
+                        Link
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="fa fa-file-image-o"></i>
+                        Bild
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="fa fa-file-pdf-o"></i>
+                        PDF
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
 
               <!-- Configuration -->
-              <div id="configuration">
-                  <div id="color-scheme-selector" class="btn-group">
-                      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Color-Schemes <span class="caret"></span>
-                      </button>
-                      <ul class="dropdown-menu">
-                          <li><a href="#" data-cmd="changeColor" data-color-scheme="scheme1">Color-Scheme #1</a></li>
-                          <li><a href="#" data-cmd="changeColor" data-color-scheme="scheme2">Color-Scheme #2</a></li>
-                          <li><a href="#" data-cmd="changeColor" data-color-scheme="scheme3">Colorless</a></li>
-                      </ul>
-                  </div>
+              <div id="configuration" class="chart-process">
+                <div id="color-scheme-selector" class="">
+                  <ul class="">
+                    <li>
+                      <p>
+                        Farbe-Schemes
+                      </p>
+                    </li>
+                    <li>
+                      <a href="#" data-cmd="changeColor" data-color-scheme="scheme1">
+                        <!-- Color-Scheme #1 -->
+                        <img src="image/detail/farbe-1.png" alt="" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" data-cmd="changeColor" data-color-scheme="scheme2">
+                        <!-- Color-Scheme #2 -->
+                        <img src="image/detail/farbe-2.png" alt="" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" data-cmd="changeColor" data-color-scheme="scheme3">
+                        <!-- Colorless -->
+                        <img src="image/detail/farbe-3.png" alt="" />
+                      </a>
+                    </li>
+                  </ul>
+                </div>
 
-                  <div id="color-scheme-picker">
-                      <button data-cmd="pickScheme" class="btn btn-default btn-pick-scheme">Pick Color Scheme</button>
-                  </div>
+                <div id="color-scheme-picker">
+                  <button data-cmd="pickScheme" class="">
+                    Pick Color Scheme
+                  </button>
+                </div>
 
-                  <div id="pick-a-scheme-modal" class="modal fade" tabindex="-1" role="dialog" style="z-index: 99999">
-                      <div class="modal-dialog">
-                          <div class="modal-content">
-                              <div class="modal-header">
-                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                  <h4 class="modal-title">Pick Your Colors</h4>
-                              </div>
-                              <div class="modal-body">
-                                  <input type="color" class="form-control" id="color1" placeholder="data1">
-                                  <input type="color" class="form-control" id="color2">
-                                  <input type="color" class="form-control" id="color3">
-                              </div>
-                              <div class="modal-footer">
-                                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                  <button type="button" class="btn btn-primary" id="set-scheme-save">Save changes</button>
-                              </div>
-                          </div>
+                <div id="pick-a-scheme-modal" class="modal fade" tabindex="-1" role="dialog" style="z-index: 99999">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">
+                          Pick Your Colors
+                        </h4>
                       </div>
-                  </div>
-
-                  <div id="x-label-change" class="modal fade" tabindex="-1" role="dialog" style="z-index: 99999">
-                      <div class="modal-dialog">
-                          <div class="modal-content">
-                              <div class="modal-header">
-                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                  <h4 class="modal-title">Change X-Axis Label</h4>
-                              </div>
-                              <div class="modal-body">
-                                  <input type="text" class="form-control" id="set-x-label" placeholder="New Label Name">
-                              </div>
-                              <div class="modal-footer">
-                                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                  <button type="button" class="btn btn-primary" id="set-x-label-save">Save changes</button>
-                              </div>
-                          </div>
+                      <div class="modal-body">
+                        <input type="color" class="form-control" id="color1" placeholder="data1">
+                        <input type="color" class="form-control" id="color2">
+                        <input type="color" class="form-control" id="color3">
                       </div>
-                  </div>
-
-                  <div id="y-label-change" class="modal fade" tabindex="-1" role="dialog" style="z-index: 99999">
-                      <div class="modal-dialog">
-                          <div class="modal-content">
-                              <div class="modal-header">
-                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                  <h4 class="modal-title">Change Y-Axis Label</h4>
-                              </div>
-                              <div class="modal-body">
-                                  <input type="text" class="form-control" id="set-y-label" placeholder="New Label Name">
-                              </div>
-                              <div class="modal-footer">
-                                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                  <button type="button" class="btn btn-primary" id="set-y-label-save">Save changes</button>
-                              </div>
-                          </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">
+                          Close
+                        </button>
+                        <button type="button" class="btn btn-primary" id="set-scheme-save">
+                          Save changes
+                        </button>
                       </div>
+                    </div>
                   </div>
+                </div>
+
+                <div id="x-label-change" class="modal fade" tabindex="-1" role="dialog" style="z-index: 99999">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Change X-Axis Label</h4>
+                      </div>
+                      <div class="modal-body">
+                        <input type="text" class="form-control" id="set-x-label" placeholder="New Label Name">
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="set-x-label-save">Save changes</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="y-label-change" class="modal fade" tabindex="-1" role="dialog" style="z-index: 99999">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Change Y-Axis Label</h4>
+                      </div>
+                      <div class="modal-body">
+                        <input type="text" class="form-control" id="set-y-label" placeholder="New Label Name">
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="set-y-label-save">Save changes</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               <!-- Transformation -->
-              <div id="transformation">
+              <div id="transformation" class="chart-process">
                 <div class="chart-img-row">
                   <div class="img-row">
                     <ul>
                       <li>
-                        <button data-cmd="transform" data-transform="line" class="btn btn-default btn-transform">
+                        <button data-cmd="transform" data-transform="line" class="btn-transform">
                           <!-- Line Chart -->
                           <img src="image/detail/chart-1.jpg" alt="">
                         </button>
                       </li>
                       <li>
-                        <button data-cmd="transform" data-transform="bar" class="btn btn-default btn-transform">
+                        <button data-cmd="transform" data-transform="bar" class="btn-transform">
                           <!-- Bar Chart -->
                           <img src="image/detail/chart-2.jpg" alt="">
                         </button>
                       </li>
                       <li>
-                        <button data-cmd="transform" data-transform="pie" class="btn btn-default btn-transform">
+                        <button data-cmd="transform" data-transform="pie" class="btn-transform">
                           <!-- Pie Chart -->
                           <img src="image/detail/chart-3.jpg" alt="">
                         </button>
                       </li>
                       <li>
-                        <button data-cmd="transform" data-transform="area" class="btn btn-default btn-transform">
+                        <button data-cmd="transform" data-transform="area" class="btn-transform">
                           <!-- Area Chart -->
                           <img src="image/detail/chart-4.jpg" alt="">
                         </button>
                       </li>
                       <li>
-                        <button data-cmd="transform" data-transform="donut" class="btn btn-default btn-transform">
+                        <button data-cmd="transform" data-transform="donut" class="btn-transform">
                           <!-- Donut Chart -->
                           <img src="image/detail/chart-5.jpg" alt="">
                         </button>
                       </li>
                       <li>
-                        <button data-cmd="transform" data-transform="spline" class="btn btn-default btn-transform">
+                        <button data-cmd="transform" data-transform="spline" class="btn-transform">
                           <!-- Spline Chart -->
                           <img src="image/detail/chart-6.jpg" alt="">
                         </button>
                       </li>
                       <li>
-                        <button data-cmd="transform" data-transform="area-spline" class="btn btn-default btn-transform">
+                        <button data-cmd="transform" data-transform="area-spline" class="btn-transform">
                           <!-- Area Spline Chart -->
                           <img src="image/detail/chart-7.jpg" alt="">
                         </button>
                       </li>
                       <li>
-                        <button data-cmd="transform" data-transform="scatter" class="btn btn-default btn-transform">
+                        <button data-cmd="transform" data-transform="scatter" class="btn-transform">
                           <!-- Scatter Plot Chart -->
                           <img src="image/detail/chart-8.jpg" alt="">
                         </button>
                       </li>
                       <li>
-                        <button class="btn btn-default btn-transform">
+                        <button class="btn-transform">
                           <!-- Scatter Plot Chart -->
                           <img src="image/detail/chart-9.jpg" alt="">
                         </button>
@@ -258,7 +319,13 @@
                     </ul>
                   </div>
                 </div>
+              </div>
 
+              <div id="content-save" class="chart-process">
+                <button type="button" name="button">
+                  <i class="fa fa-floppy-o"></i>
+                  Speichern
+                </button>
               </div>
 
             </div>
