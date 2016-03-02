@@ -616,24 +616,22 @@ input[type='checkbox']:checked + span.checkbox-target:after {
   .display-2 dd {
     @include make-md-column(12);
 
-    height: 120px;
-    margin-bottom: 30px;
+    //height: 120px;
+    margin-bottom: 10px;
 
     .content-detail {
       position: relative;
       height: 140px;
       background: $color-white;
-      box-shadow: 0 0 2px 0 darken($color-light-gray, 10);
+      @include box-shadow-css;
 
       @media (min-width: $screen-md-min) {
-        height: 120px;
+        height: 105px;
       }
 
       .content-title {
         @include make-sm-column(9);
-        @include make-sm-column-offset(3);
         @include make-md-column(10);
-        @include make-md-column-offset(2);
 
         a {
           display: block;
@@ -645,23 +643,8 @@ input[type='checkbox']:checked + span.checkbox-target:after {
 
       .content-img-beschreibung {
         img {
-          @include make-sm-column(3);
-          @include make-md-column(2);
-
-          display: block;
-          float: left;
-          margin-top: -19px;
-
-          @media (min-width: $screen-md-min) {
-            margin-top: -20px;
-          }
-
-          @media (min-width: $screen-lg-min) {
-            margin-top: -33px;
-          }
+          display: none;
         }
-
-
 
         .content-beschreibung {
           @include make-sm-column(9);
