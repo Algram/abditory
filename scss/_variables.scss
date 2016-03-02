@@ -143,6 +143,8 @@ $second-bg-color: $color-light-black;
 }
 
 @mixin content-chart-box-css {
+  margin-bottom: 0;
+
   dd{
     @include make-xs-column(6);
     @include make-md-column(4);
