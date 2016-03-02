@@ -742,9 +742,14 @@ input[type='checkbox']:checked + span.checkbox-target:after {
   .login-checkbox {
     @include make-sm-column(12);
     @include make-md-column(6);
+    line-height: 55px;
 
     height: 35px;
     padding: 0;
+
+    input {
+      display: none;
+    }
 
     label {
       height: 35px;
@@ -776,7 +781,7 @@ input[type='checkbox']:checked + span.checkbox-target:after {
 
   .login-reset {
     @include make-sm-column(12);
-    padding: 20px 0 0 0;
+    padding: 5px 0 0 0;
   }
 }
 
