@@ -97,3 +97,7 @@
     }
   }
 }
+
+.content-chart-box {
+  @include content-chart-box-css;
+}
