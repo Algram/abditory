@@ -114,7 +114,7 @@
   a {
     @include make-sm-column(4);
     @include make-md-column(5);
-    margin-top: 32px;
+    margin-top: 50px;
     text-align: right;
     color: $color-dark-black;
   }
