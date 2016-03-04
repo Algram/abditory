@@ -9,19 +9,17 @@
   }
 }
 
-.content-faecher {
-  .img-no-blur {
+.content-faecher .content-wrapper .content-smallbox dd .content-detail .content-beschreibung {
+  width: 100%;
+  padding: 19% 25%;
 
-    img {
-      position: absolute;
-      width: 100%;
-      @include box-shadow-css;
-    }
+  a {
+    color: $color-dark-gray;
+    float: none;
+    text-align: center;
 
-    &:hover {
-      img {
-        width: 100%;
-      }
+    i {
+      font-size: 45px;
     }
   }
 }
