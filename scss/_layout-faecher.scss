@@ -8,3 +8,20 @@
     margin: 50px 0 0 0;
   }
 }
+
+.content-faecher {
+  .img-no-blur {
+
+    img {
+      position: absolute;
+      width: 100%;
+      @include box-shadow-css;
+    }
+
+    &:hover {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
