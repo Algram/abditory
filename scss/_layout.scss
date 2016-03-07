@@ -579,10 +579,12 @@ input[type='checkbox']:checked + span.checkbox-target:after {
 
       #switch-button-1 {
         background-position-x: -2px;
+        cursor: pointer;
       }
 
       #switch-button-2 {
         background-position-x: -47px;
+        cursor: pointer;
       }
     }
 
