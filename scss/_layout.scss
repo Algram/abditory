@@ -792,11 +792,17 @@ input[type='checkbox']:checked + span.checkbox-target:after {
   }
 }
 
+.call-to-action-bottom {
+    padding-top: 0px;
+    padding-bottom: 80px;
+}
+
 .footer {
   height: 50px;
   color: $color-white;
 
   .copyright {
+      margin: 0;
       text-align: center;
       line-height: 50px;
   }
