@@ -42,8 +42,9 @@
       height: 458px;
       padding: 20px 0;
       background: $color-white;
-      border: solid 1px $color-dark-gray;
-      box-shadow: 0 0 5px 0 $color-dark-gray;
+      //border: solid 1px $color-dark-gray;
+      //box-shadow: 0 0 5px 0 $color-dark-gray;
+      @include box-shadow-css;
 
       #chart {
         height: 100%;
@@ -68,8 +69,9 @@
       float: left;
       list-style: none;
       background: $color-white;
-      border: solid 1px $color-dark-gray;
-      box-shadow: 0 0 5px 0 $color-dark-gray;
+      //border: solid 1px $color-dark-gray;
+      //box-shadow: 0 0 5px 0 $color-dark-gray;
+      @include box-shadow-css;
 
       li {
         width: 100%;
@@ -107,8 +109,8 @@
       line-height: 40px;
       border-radius: 0;
       background: $color-white;
-      border: solid 1px $color-dark-gray;
-      box-shadow: 0 0 5px 0 $color-dark-gray;
+      border: none;
+      @include box-shadow-css;
     }
   }
 
