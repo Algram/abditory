@@ -49,17 +49,7 @@
         height: 100%;
       }
 
-      #button-chart-process {
-        position: absolute;
 
-        top: 10px;
-        right: 10px;
-        z-index: 200;
-
-        i {
-          font-size: 30px;
-        }
-      }
     }
   }
 
@@ -147,6 +137,24 @@
             margin-right: 10px;
           }
         }
+      }
+    }
+  }
+
+  .content-arbeien-button {
+    @include make-xs-column(3);
+    @include make-md-column(2);
+    @include content-button;
+
+    #button-chart-process, #button-fav, #button-share {
+      margin-bottom: 10px;
+      text-align: left;
+
+
+      i {
+        margin-right: 10px;
+        font-size: 20px;
+        margin-left: 25px;
       }
     }
   }
