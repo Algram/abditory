@@ -15,11 +15,15 @@ $(function(){
 		$('.chart-process').addClass('display-block').removeClass('display-none');
 		$('.content-export').addClass('display-none').removeClass('display-block');
 		$('#button-chart-process').addClass('display-none').removeClass('display-block');
+		$('#button-fav').addClass('display-none').removeClass('display-block');
+		$('#button-share').addClass('display-none').removeClass('display-block');
 	});
 	$('#content-save').click(function() {
 		$('.chart-process').addClass('display-none').removeClass('display-block');
 		$('.content-export').addClass('display-block').removeClass('display-none');
 		$('#button-chart-process').addClass('display-block').removeClass('display-none');
+		$('#button-fav').addClass('display-block').removeClass('display-none');
+		$('#button-share-alt').addClass('display-block').removeClass('display-none');
 	});
 
 });
