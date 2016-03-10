@@ -266,6 +266,12 @@ nav {
   }
 }
 
+.content-only-text {
+  @include make-md-column(6);
+  @include make-md-column-offset(3);
+  text-align: center;
+}
+
 .empty-content {
   height: 300px;
 
