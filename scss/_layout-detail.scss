@@ -52,6 +52,25 @@
 
 
     }
+    
+    #chart-canvas_2 {
+      @include make-xs-column(9);
+      @include make-md-column(8);
+      @include make-md-column-offset(2);
+
+      height: 600px;
+      padding: 20px 0;
+      background: $color-white;
+      //border: solid 1px $color-dark-gray;
+      //box-shadow: 0 0 5px 0 $color-dark-gray;
+      @include box-shadow-css;
+
+      #chart_2 {
+        height: 500px;
+        padding-left: 150px;
+      }
+
+    }
   }
 
   #configuration {
