@@ -644,17 +644,21 @@ input[type='checkbox']:checked + span.checkbox-target:after {
   .display-2 dd {
     @include make-md-column(12);
 
-    //height: 120px;
+    margin-top: 15px;
     margin-bottom: 10px;
+
+    @media (min-width: $screen-md-min) {
+      margin-top: 0;
+    }
 
     .content-detail {
       position: relative;
-      height: 140px;
+      height: 130px;
       background: $color-white;
       @include box-shadow-css;
 
       @media (min-width: $screen-md-min) {
-        height: 105px;
+        height: 120px;
       }
 
       .content-title {
