@@ -52,7 +52,7 @@
 
 
     }
-    
+
     #chart-canvas_2 {
       @include make-xs-column(9);
       @include make-md-column(8);
@@ -66,8 +66,13 @@
       @include box-shadow-css;
 
       #chart_2 {
-        height: 500px;
-        padding-left: 150px;
+        height: 400px;
+        padding-left: 140px;
+        margin-top: -40px;
+
+        #chart-iframe {
+          -webkit-clip-path: inset(100px 100px 0px 0px);
+        }
       }
 
     }
