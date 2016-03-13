@@ -14,12 +14,23 @@
 
   height: 231px;
   padding-top: 50px;
-  margin: 50px 15px 20px;
+  margin: 70px 15px 20px;
   background-color: $color-white;
-  border: solid 1px $color-dark-gray;
-  box-shadow: 0 0 5px 0 $color-dark-gray;
+  @include box-shadow-css;
 
+}
 
+.charts-detail {
+  .content-img-beschreibung {
+    img {
+      padding: 10px;
+      background: #ffffff;
+    }
+  }
+}
+
+.last-row {
+  padding-bottom: 50px;
 }
 
 .content-meine-bg {
