@@ -655,22 +655,22 @@ input[type='checkbox']:checked + span.checkbox-target:after {
   .display-2 dd {
     @include make-md-column(12);
 
-    margin-top: 15px;
-    margin-bottom: 10px;
-
-    @media (min-width: $screen-md-min) {
-      margin-top: 0;
-    }
+    //margin-top: 15px;
+    //margin-bottom: 10px;
+    margin-top: 10px;
+    //@media (min-width: $screen-md-min) {
+    //  margin-top: 0;
+    //}
 
     .content-detail {
       position: relative;
-      height: 130px;
+      height: 90px;
       background: $color-white;
       @include box-shadow-css;
 
-      @media (min-width: $screen-md-min) {
-        height: 120px;
-      }
+      //@media (min-width: $screen-md-min) {
+      //  height: 95px;
+      //}
 
       .content-title {
         @include make-sm-column(9);
@@ -690,8 +690,8 @@ input[type='checkbox']:checked + span.checkbox-target:after {
         }
 
         .content-beschreibung {
-          @include make-sm-column(9);
-          @include make-md-column(10);
+          @include make-sm-column(12);
+          @include make-md-column(12);
           display: block;
           float: left;
           font-weight: 300;
@@ -701,6 +701,11 @@ input[type='checkbox']:checked + span.checkbox-target:after {
           }
 
           .star-share {
+            display: block;
+            position: absolute;
+            top: -25px;
+            right: 5px;
+
             a {
               color: $color-dark-gray;
 
