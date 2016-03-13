@@ -91,8 +91,9 @@ $second-bg-color: $color-light-black;
       }
 
       @media (min-width: $screen-lg-min) {
-        height: 150px;
-        top: 138px;
+        height: 140px;
+        top: 148px;
+        padding: 15px 20px;
       }
 
       p {
@@ -122,6 +123,22 @@ $second-bg-color: $color-light-black;
             padding-right: 2px;
           }
         }
+      }
+    }
+
+    .content-themengebiet {
+      height: 160px;
+      top: 115px;
+
+      @media (min-width: $screen-md-min) {
+        height: 191px;
+        top: 50px;
+      }
+
+      @media (min-width: $screen-lg-min) {
+        height: 160px;
+        top: 125px;
+        padding: 15px 20px;
       }
     }
   }
