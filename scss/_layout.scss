@@ -567,12 +567,14 @@ input[type='checkbox']:checked + span.checkbox-target:after {
 
 
   .trefferlist-display-switch {
-    @include make-sm-column(3);
-    @include make-sm-column-offset(2);
-    @include make-md-column(3);
-    @include make-md-column-offset(3);
-    @include make-lg-column(2);
-    @include make-lg-column-offset(4);
+    //@include make-sm-column(3);
+    //@include make-sm-column-offset(2);
+    //@include make-md-column(3);
+    //@include make-md-column-offset(3);
+    //@include make-lg-column(2);
+    //@include make-lg-column-offset(4);
+    display: block;
+    float: right;
 
     padding-right: 0;
     margin-top: -18px;
