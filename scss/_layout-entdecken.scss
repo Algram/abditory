@@ -220,6 +220,13 @@
 //}
 
 .content-entdecken-chart-row {
+  padding-bottom: 30px;
+
+  img {
+    padding: 10px;
+    background: #ffffff;
+  }
+
   @media (min-width: $screen-lg-min) {
     margin-bottom: 25px;
   }
