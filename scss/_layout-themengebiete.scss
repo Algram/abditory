@@ -27,6 +27,7 @@
     img {
       display: block;
       margin: 0;
+      width: 100%;
     }
 
     li {
@@ -47,6 +48,11 @@
 
 .page-themengebiete .content-wrapper .display-2 dd .content-detail {
     height: 130px;
+}
+
+.themengebiet-title {
+    padding: 5px 5px 5px 10px;
+    margin: 0;
 }
 
 a.themengebiet {
