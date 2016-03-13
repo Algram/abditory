@@ -104,7 +104,14 @@
       font-size: 14px;
 
       a {
+        display: inline-block;
         color: $color-light-black;
+        margin-right: 10px;
+
+      }
+
+      i:before {
+        padding-right: 2px;
       }
     }
   }
