@@ -1,3 +1,8 @@
+.four-cols {
+    display: inline-block;
+    width: 24%;
+}
+
 .content-detail-page {
   @include make-md-column(8);
   @include make-md-column-offset(2);
@@ -243,7 +248,7 @@
     }
   }
 
-  #x-label-change, #y-label-change, #pick-a-scheme-modal {
+  #x-label-change, #y-label-change, #pick-a-scheme-modal, #export-as-link {
     .modal-content {
       border-radius: 0;
 
@@ -257,7 +262,7 @@
         border-radius: 0;
       }
 
-      #set-x-label-save, #set-y-label-save, #set-scheme-save {
+      #set-x-label-save, #set-y-label-save, #set-scheme-save, #export-as-link-btn {
         background: $color-red;
         border: 1px solid $color-red;
       }
