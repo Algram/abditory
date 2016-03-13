@@ -17,6 +17,7 @@ $(function(){
 		$('#button-chart-process').addClass('display-none').removeClass('display-block');
 		$('#button-fav').addClass('display-none').removeClass('display-block');
 		$('#button-share').addClass('display-none').removeClass('display-block');
+		$('#worksheet-preview').addClass('display-none').removeClass('display-block');
 	});
 	$('#content-save').click(function() {
 		$('.chart-process').addClass('display-none').removeClass('display-block');
@@ -24,6 +25,7 @@ $(function(){
 		$('#button-chart-process').addClass('display-block').removeClass('display-none');
 		$('#button-fav').addClass('display-block').removeClass('display-none');
 		$('#button-share-alt').addClass('display-block').removeClass('display-none');
+		$('#worksheet-preview').addClass('display-block').removeClass('display-none');
 	});
 
 });
