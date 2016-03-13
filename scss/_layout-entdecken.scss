@@ -84,6 +84,9 @@
     @include make-sm-column-offset(5);
     color: $color-dark-black;
 
+    height: 60px;
+    padding: 15px 0;
+
     i {
       font-size: 15px;
     }
