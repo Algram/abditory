@@ -409,9 +409,29 @@ nav {
       margin: -250px auto 0;
     }
 
+    video {
+      position: absolute;
+      top: -213px;
+      width: 72%;
+      margin: 0 12%;
+      background: $color-light-black;
+    }
+
     @media (min-width: $screen-md-min) {
       img {
         margin: -340px auto 0;
+      }
+
+      video {
+        top: -300px;
+        width: 72.3%;
+      }
+    }
+
+    @media (min-width: $screen-lg-min) {
+      video {
+        top: -290px;
+        width: 73%;
       }
     }
   }
