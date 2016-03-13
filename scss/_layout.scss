@@ -514,6 +514,11 @@ input[type='checkbox']:checked + span.checkbox-target:after {
     font-weight: 300;
 
     @media (min-width: $screen-md-min) {
+      width: 18%;
+      margin-top: 10px;
+    }
+
+    @media (min-width: $screen-lg-min) {
       width: 13%;
       margin-top: 10px;
     }

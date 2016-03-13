@@ -125,6 +125,22 @@ $second-bg-color: $color-light-black;
         }
       }
     }
+
+    .content-themengebiet {
+      height: 160px;
+      top: 115px;
+
+      @media (min-width: $screen-md-min) {
+        height: 191px;
+        top: 50px;
+      }
+
+      @media (min-width: $screen-lg-min) {
+        height: 160px;
+        top: 125px;
+        padding: 15px 20px;
+      }
+    }
   }
 }
 
