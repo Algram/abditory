@@ -55,16 +55,15 @@
     margin: 0;
 }
 
-.display-1 .la-pill {
-    float: right;
-    margin-right: 15px;
-}
-
 .display-2 .la-pill {
-
+    float: none;
+    margin: 0;
 }
 
 .la-pill {
+    float: right;
+    margin-right: 15px;
+
     span {
         background-color: $color-red;
         color: white;
