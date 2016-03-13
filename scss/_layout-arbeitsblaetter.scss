@@ -25,6 +25,7 @@
   .display-arbeitsblaetter dd {
     @include make-sm-column(6);
     @include make-md-column(4);
+    @include box-shadow-css;
 
     @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
       width: 345px;

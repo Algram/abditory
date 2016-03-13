@@ -616,6 +616,15 @@ input[type='checkbox']:checked + span.checkbox-target:after {
   }
 }
 
+.charts-trefferliste {
+  .content-img-beschreibung {
+    img {
+      padding: 10px;
+      background: #ffffff;
+    }
+  }
+}
+
 .content-wrapper {
 
   //display with box
