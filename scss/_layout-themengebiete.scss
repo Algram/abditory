@@ -47,7 +47,7 @@
 }
 
 .page-themengebiete .content-wrapper .display-2 dd .content-detail {
-    height: 130px;
+    height: 170px;
 }
 
 .themengebiet-title {
@@ -55,11 +55,16 @@
     margin: 0;
 }
 
-
-.la-pill {
+.display-1 .la-pill {
     float: right;
     margin-right: 15px;
+}
 
+.display-2 .la-pill {
+
+}
+
+.la-pill {
     span {
         background-color: $color-red;
         color: white;
@@ -67,6 +72,19 @@
         border-radius: 15px;
         font-size: 11px;
     }
+}
+
+.display-2 .content-themengebiet {
+    margin-top: 15px;
+}
+
+.margin-top {
+    margin-top: 20px;
+}
+
+.page-themengebiete .content-wrapper .display-2 dd .content-detail .content-img-beschreibung .content-beschreibung .star-share {
+    top: auto;
+    bottom: 0;
 }
 
 a.themengebiet {
