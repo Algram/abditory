@@ -606,11 +606,6 @@ input[type='checkbox']:checked + span.checkbox-target:after {
     width: 100px;
     margin-right: 15px;
 
-    &.trefferliste-themengebiete {
-      margin-top: 15px;
-    }
-
-
     ul {
       display: block;
       float: right;
