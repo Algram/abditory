@@ -78,6 +78,7 @@ window.addEventListener('DOMContentLoaded', function() {
         addColorSchemeSelectEventListeners();
         addPickASchemeEventListeners();
         addLabelChangeEventListeners();
+        exportAsLink();
     })();
 
     /**
@@ -394,6 +395,17 @@ window.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+    /**
+     * Open Export As Link modal
+     */
+     function exportAsLink() {
+        var trigger = document.getElementById('export-as-link-trigger');
+
+        trigger.addEventListener('click', function() {
+            $('#export-as-link').modal('show');
+        });
+     }
 
     /**
      * For-Each Function

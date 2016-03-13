@@ -151,7 +151,7 @@
                   </button>
                   <ul class="dropdown-menu" aria-labelledby="dropdownMenu-export">
                     <li>
-                      <a href="#">
+                      <a href="#" id="export-as-link-trigger">
                         <i class="fa fa-link"></i>
                         Link
                       </a>
@@ -252,14 +252,14 @@
                     <div class="modal-content">
                       <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title">Change X-Axis Label</h4>
+                        <h4 class="modal-title">X-Achsenbeschriftung ändern</h4>
                       </div>
                       <div class="modal-body">
-                        <input type="text" class="form-control" id="set-x-label" placeholder="New Label Name">
+                        <input type="text" class="form-control" id="set-x-label" placeholder="Neue X-Achsenbeschriftung eingeben">
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary" id="set-x-label-save">Save changes</button>
+                        <button type="button" class="btn btn-primary" id="set-x-label-save">Änderungen anwenden</button>
                       </div>
                     </div>
                   </div>
@@ -270,14 +270,14 @@
                     <div class="modal-content">
                       <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title">Change Y-Axis Label</h4>
+                        <h4 class="modal-title">Y-Achsenbeschriftung ändern</h4>
                       </div>
                       <div class="modal-body">
-                        <input type="text" class="form-control" id="set-y-label" placeholder="New Label Name">
+                        <input type="text" class="form-control" id="set-y-label" placeholder="Neue Y-Achsenbeschriftung eingeben">
                       </div>
                       <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary" id="set-y-label-save">Save changes</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Schließen</button>
+                        <button type="button" class="btn btn-primary" id="set-y-label-save">Änderungen anwenden</button>
                       </div>
                     </div>
                   </div>
@@ -344,6 +344,28 @@
                         </button>
                       </li>
                     </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div id="export-as-link" class="modal fade" tabindex="-1" role="dialog" style="z-index: 99999">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <h4 class="modal-title">Als Link exportieren</h4>
+                    </div>
+                    <div class="modal-body">
+                      <p>Ihr Share-Link ist gültig bis: 01.04.2016</p>
+                      <p>
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="https://abditory.com/7xJlmQf">
+                          <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">Kopieren</button>
+                          </span>
+                        </div><!-- /input-group -->
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
