@@ -524,21 +524,30 @@ input[type='checkbox']:checked + span.checkbox-target:after {
   }
 
   .trefferliste-filter {
+    //@include make-sm-column(3);
     @include make-md-column(12);
+    @include make-md-column(3);
     margin-top: 40px;
     font-weight: 300;
 
     @media (min-width: $screen-md-min) {
+      width: 18%;
+      margin-top: 10px;
+    }
+
+    @media (min-width: $screen-lg-min) {
+      width: 13%;
       margin-top: 10px;
     }
   }
 
   button {
-    @include make-md-column(2);
+    width: 100%;
+    //@include make-md-column(2);
 
-    @media (min-width: $screen-lg-min) {
-      width: 12%;
-    }
+    //@media (min-width: $screen-lg-min) {
+    //  width: 12%;
+    //}
 
     padding: 0;
     margin-left: 0;
@@ -569,11 +578,12 @@ input[type='checkbox']:checked + span.checkbox-target:after {
   }
 
   span.trefferliste-checkbox {
-    @include make-md-column(2);
-
-    @media (min-width: $screen-lg-min) {
-      width: 15%;
-    }
+    width: 100%;
+    //@include make-md-column(2);
+    //
+    //@media (min-width: $screen-lg-min) {
+    //  width: 15%;
+    //}
 
     label {
       @include text-font-family;
@@ -581,29 +591,25 @@ input[type='checkbox']:checked + span.checkbox-target:after {
     }
   }
 
-
-
   .trefferlist-display-switch {
-    //@include make-sm-column(3);
-    //@include make-sm-column-offset(2);
-    //@include make-md-column(3);
-    //@include make-md-column-offset(3);
-    //@include make-lg-column(2);
-    //@include make-lg-column-offset(4);
     display: block;
     float: right;
+    width: 100px;
+    margin-right: 15px;
+    //
+    //padding-right: 0;
+    //margin-top: -18px;
+    //
+    //@media (min-width: $screen-md-min) {
+    //  margin-top: -18px;
+    //}
 
-    padding-right: 0;
-    margin-top: -18px;
-
-    @media (min-width: $screen-md-min) {
-      margin-top: -18px;
-    }
 
     ul {
       display: block;
       float: right;
       height: 35px;
+      padding-left: 0;
       list-style-type: none;
 
       li {
@@ -672,22 +678,13 @@ input[type='checkbox']:checked + span.checkbox-target:after {
   .display-2 dd {
     @include make-md-column(12);
 
-    //margin-top: 15px;
-    //margin-bottom: 10px;
     margin-top: 10px;
-    //@media (min-width: $screen-md-min) {
-    //  margin-top: 0;
-    //}
 
     .content-detail {
       position: relative;
       height: 90px;
       background: $color-white;
       @include box-shadow-css;
-
-      //@media (min-width: $screen-md-min) {
-      //  height: 95px;
-      //}
 
       .content-title {
         @include make-sm-column(9);
