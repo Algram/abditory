@@ -47,7 +47,15 @@
 }
 
 .page-themengebiete .content-wrapper .display-2 dd .content-detail {
-    height: 170px;
+  height: 110px;
+
+  @media (min-width: $screen-md-min) {
+    height: 90px;
+  }
+
+  @media (min-width: $screen-lg-min) {
+    height: 90px;
+  }
 }
 
 .themengebiet-title {
@@ -73,8 +81,23 @@
     }
 }
 
+.display-1 .content-themengebiet {
+  a {
+    color: $color-light-black;
+  }
+}
+
 .display-2 .content-themengebiet {
-    margin-top: 15px;
+  p {
+    display: block;
+    float: left;
+    margin: 0 15px 0 0;
+  }
+
+  p + a {
+    @include make-sm-column(8);
+    padding-left: 0;
+  }
 }
 
 .margin-top {
