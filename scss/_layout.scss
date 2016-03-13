@@ -688,14 +688,21 @@ input[type='checkbox']:checked + span.checkbox-target:after {
       @include box-shadow-css;
 
       .content-title {
-        @include make-sm-column(9);
-        @include make-md-column(10);
+        @include make-sm-column(12);
+        @include make-md-column(12);
 
         a {
           display: block;
+          float: left;
           height: 40px;
           line-height: 50px;
           color: $color-dark-black;
+        }
+
+        .la-pill {
+          position: absolute;
+          top: 15px;
+          right: 15px;
         }
       }
 
@@ -718,7 +725,7 @@ input[type='checkbox']:checked + span.checkbox-target:after {
           .star-share {
             display: block;
             position: absolute;
-            top: -25px;
+            bottom: 10px;
             right: 5px;
 
             a {
