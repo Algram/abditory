@@ -55,6 +55,19 @@
     margin: 0;
 }
 
+
+.la-pill {
+    float: right;
+    margin-right: 15px;
+
+    span {
+        background-color: $color-red;
+        color: white;
+        padding: 2px 8px;
+        border-radius: 15px;
+    }
+}
+
 a.themengebiet {
     color: #000;
     background-color: #fff;
