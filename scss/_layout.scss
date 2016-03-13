@@ -233,8 +233,12 @@ nav {
         line-height: 36px;
         color: $color-dark-black;
 
-        font-size: 16px;
+        font-size: 14px;
         text-align: center;
+
+        @media (min-width: $screen-md-min) {
+          font-size: 16px;
+        }
       }
 
       &.active {
