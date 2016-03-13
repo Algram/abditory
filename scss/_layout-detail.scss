@@ -183,10 +183,11 @@
   }
 
   #worksheet-preview {
-      margin-top: 10px;
+      margin-top: 81px;
       max-width: 100%;
 
       img {
+          @include box-shadow-css();
           max-width: 100%;
       }
   }
