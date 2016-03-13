@@ -25,6 +25,7 @@ $(function(){
 		$('#button-chart-process').addClass('display-block').removeClass('display-none');
 		$('#button-fav').addClass('display-block').removeClass('display-none');
 		$('#button-share-alt').addClass('display-block').removeClass('display-none');
+		$('#button-share').addClass('display-block').removeClass('display-none');
 		$('#worksheet-preview').addClass('display-block').removeClass('display-none');
 	});
 
