@@ -255,14 +255,16 @@ nav {
 
 //Page Landingpage
 .content-title-text {
-  @include make-md-column(6);
-  @include make-md-column-offset(3);
+  @include make-md-column(8);
+  @include make-md-column-offset(2);
 
   padding: 120px 0 10px 0;
   text-align: center;
 
   p {
     padding-bottom: 20px;
+    line-height: 30px;
+    font-size: 16px;
   }
 }
 
@@ -291,7 +293,7 @@ nav {
     @include make-md-column(4);
     @include make-md-column-offset(4);
 
-    height: 35px;
+    height: 45px;
     border: none;
     background: $color-red;
     color: $color-white;
@@ -445,7 +447,7 @@ nav {
 }
 
 .content-intro {
-  padding: 20px 0;
+  padding: 20px 70px;
 
   &:first-child {
     padding-top:100px;
@@ -455,21 +457,32 @@ nav {
     padding-bottom: 100px;
   }
 
+  .row {
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    border: none;
+    border-bottom: 0.5px dotted $color-light-black;
+
+  }
+
   .content-intro-img {
     @include make-sm-column(6);
 
     img {
       display: block;
-      width: 300px;
+      width: 350px;
       margin: auto;
+
     }
   }
 
   .content-intro-text {
     @include make-sm-column(6);
 
-    height: 200px;
-    padding: 50px 0;
+    font-size: 16px;
+    text-align: justify;
+    line-height: 40px;
+    padding: 0px 20px 0px 20px;
   }
 }
 
@@ -821,7 +834,7 @@ input[type='checkbox']:checked + span.checkbox-target:after {
 
 .call-to-action-bottom {
     padding-top: 0px;
-    padding-bottom: 80px;
+    padding-bottom: 100px;
 }
 
 .footer {
