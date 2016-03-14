@@ -36,6 +36,9 @@ $(function(){
 
 	$('a.themengebiet').click(function() {
 		$(this).find('.themengebiet-title-pin').toggleClass('display-none');
+
+		var $title = $(this).find('.themengebiet-title').text();
+		var select = $('.themengebiet-toggle').html($title + " <span class='caret'></span>");		
 	});
 
 	$('.selectable-dropdown ul li').click(function() {
