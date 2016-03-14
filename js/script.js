@@ -38,4 +38,11 @@ $(function(){
 		$(this).find('.themengebiet-title-pin').toggleClass('display-none');
 	});
 
+	$('.selectable-dropdown ul li').click(function() {
+		var $text = $(this).find('a').text();
+		var $toggler = $(this).parent().parent().find('.dropdown-toggle');
+
+		$toggler.html($text+" <span class='caret'></span>");
+	});
+
 });
