@@ -146,7 +146,7 @@
     }
   }
 
-  @media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
     a:nth-child(5), a:last-child {
       display: none;
     }
