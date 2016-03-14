@@ -34,4 +34,8 @@ $(function(){
 		$question.insertBefore($(this));
 	});
 
+	$('a.themengebiet').click(function() {
+		$(this).find('.themengebiet-title-pin').toggleClass('display-none');
+	});
+
 });
