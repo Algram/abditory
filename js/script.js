@@ -45,4 +45,8 @@ $(function(){
 		$toggler.html($text+" <span class='caret'></span>");
 	});
 
+	$('[data-js="hide-some-charts"]').click(function() {
+		$('.hide-when-themengebiet').fadeOut();
+	});
+
 });
