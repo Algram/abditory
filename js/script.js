@@ -2,7 +2,7 @@ $(function(){
 	var _showTab = 0;
 	$('ul.switch-button li').eq(_showTab).addClass('turnon');
 	$('ul.switch-button li').click(function() {
-		var $color = $(this)
+		var $color = $(this);
 		$color.addClass('turnon').siblings('.turnon').removeClass('turnon');
 	});
 	$('#switch-button-1').click(function() {
@@ -31,7 +31,7 @@ $(function(){
 	$('[data-js="add-question"]').click(function() {
 		var $question = $(this).parent().find('.question-1').clone().removeClass('question-1');
 
-		$(this).parent().find('.question').append($question);
+		$question.insertBefore($(this));
 	});
 
 });
