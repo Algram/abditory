@@ -146,6 +146,12 @@
     }
   }
 
+  @media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+    a:nth-child(5), a:last-child {
+      display: none;
+    }
+  }
+
   img {
     width: 100%;
   }
