@@ -28,5 +28,10 @@ $(function(){
 		$('#button-share').addClass('display-block').removeClass('display-none');
 		$('#worksheet-preview').addClass('display-block').removeClass('display-none');
 	});
+	$('[data-js="add-question"]').click(function() {
+		var $question = $(this).parent().find('.question-1').clone().removeClass('question-1');
+
+		$(this).parent().find('.question').append($question);
+	});
 
 });
