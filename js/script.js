@@ -2,7 +2,7 @@ $(function(){
 	var _showTab = 0;
 	$('ul.switch-button li').eq(_showTab).addClass('turnon');
 	$('ul.switch-button li').click(function() {
-		var $color = $(this)
+		var $color = $(this);
 		$color.addClass('turnon').siblings('.turnon').removeClass('turnon');
 	});
 	$('#switch-button-1').click(function() {
@@ -27,6 +27,15 @@ $(function(){
 		$('#button-share-alt').addClass('display-block').removeClass('display-none');
 		$('#button-share').addClass('display-block').removeClass('display-none');
 		$('#worksheet-preview').addClass('display-block').removeClass('display-none');
+	});
+	$('[data-js="add-question"]').click(function() {
+		var $question = $(this).parent().find('.question-1').clone().removeClass('question-1');
+
+		$question.insertBefore($(this));
+	});
+
+	$('a.themengebiet').click(function() {
+		$(this).find('.themengebiet-title-pin').toggleClass('display-none');
 	});
 
 });
