@@ -58,4 +58,8 @@ $(function(){
 		$('.hide-when-jahrgangsstufe').fadeOut();
 	});
 
+	$('[data-js="hide-even-more-charts"]').click(function() {
+		$('.hide-when-arbeitsblatt').fadeOut();
+	});
+
 });
