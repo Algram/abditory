@@ -71,7 +71,7 @@ window.addEventListener('DOMContentLoaded', function() {
      */
     (function() {
         // Generate Chart
-        loadData1Chart('bar');
+        loadData2Chart('pie');
 
         // AddEventListener Functions
         addTransformationButtonsEventListeners();
