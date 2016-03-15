@@ -107,6 +107,10 @@
         display: inline-block;
         color: $color-light-black;
         margin-right: 10px;
+
+        &:hover {
+          text-decoration: none;
+        }
       }
 
       i + span {
