@@ -39,6 +39,8 @@ $(function(){
 
 		var $title = $(this).find('.themengebiet-title').text();
 		var select = $('.themengebiet-toggle').html($title + " <span class='caret'></span>");
+
+		$('.hide-when-themengebiet').fadeOut();
 	});
 
 	$('.selectable-dropdown ul li').click(function() {
