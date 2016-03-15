@@ -54,4 +54,8 @@ $(function(){
 		$('.hide-when-themengebiet').fadeOut();
 	});
 
+	$('[data-js="hide-some-more-charts"]').click(function() {
+		$('.hide-when-jahrgangsstufe').fadeOut();
+	});
+
 });
