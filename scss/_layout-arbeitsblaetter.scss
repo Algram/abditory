@@ -107,11 +107,12 @@
         display: inline-block;
         color: $color-light-black;
         margin-right: 10px;
-
       }
 
-      i:before {
-        padding-right: 2px;
+      i + span {
+        margin-left: 2px;
+        font-size: 14px;
+        font-weight: 300;
       }
     }
   }

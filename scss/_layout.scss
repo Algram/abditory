@@ -753,10 +753,15 @@ input[type='checkbox']:checked + span.checkbox-target:after {
 
               &:hover {
                 color: $color-light-black;
+                text-decoration: none;
               }
 
-              i:before {
-                padding-right: 2px;
+              //i:before {
+              //  padding-right: 2px;
+              //}
+              i + span {
+                padding-left: 2px;
+                padding-right: 3px;
               }
             }
           }

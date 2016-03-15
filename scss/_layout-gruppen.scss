@@ -41,15 +41,15 @@
         font-size: 14px;
         line-height: 40px;
 
-        i {
-          display: block;
+        .content-title-icon {
+          display: inline-block;
           float: right;
           padding-right: 10px;
           line-height: 40px;
+        }
 
-          &:before {
-            padding-right: 2px;
-          }
+        i + span {
+          padding-left: 2px;
         }
       }
 
