@@ -44,6 +44,14 @@
   }
 }
 
+.content-meine-link {
+  @include make-md-column(10);
+}
+
+.content-meine-gruppen {
+  @include make-md-column(8);
+}
+
 .content-meine-link, .content-meine-gruppen {
   @include make-md-column(8);
   @include make-md-column-offset(2);
@@ -62,28 +70,38 @@
     margin: 10px 0;
   }
 
+  .row {
+    margin-bottom: 8px;
+  }
+
+  span:first-child {
+    display:block;
+    margin-left: 15px;
+    width: 100%;
+    font-weight: 400;
+  }
+
   a {
-    display: block;
-    float: left;
-    width: 50%;
-    margin: 0 7px 0  15px;
+    display: inline-block;
+    //float: left;
+    width: 38%;
+    margin: 0 7px 0 15px;
     padding: 0 7px;
+    font-size: 11px;
     border: solid 1px $color-light-gray;
     box-shadow: 0 0 5px 0 $color-light-gray inset;
     color: $color-light-black;
   }
 
   a + i {
-    display: block;
-    float: left;
+    display: inline-block;
     margin-top: 5px;
     font-size: 12px;
   }
 
-  i + p {
-    display: block;
-    float: left;
-    margin-left: 3px;
+  i + span {
+    margin-left: 2px;
+    font-size: 12px;
   }
 }
 
